@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="753.0" style="-fx-background-color: #D1D5DB;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.app.HelloController">
+   <children>
+      <HBox layoutY="402.0" prefHeight="70.0" prefWidth="753.0" style="-fx-background-color: #8E9F9F;" />
+      <ImageView fitHeight="307.0" fitWidth="431.0" layoutX="14.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/login.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="423.0" layoutY="23.0" prefHeight="394.0" prefWidth="316.0" style="-fx-border-color: #F1F1F5; -fx-background-color: #F1F1F5;" styleClass="contenedor" stylesheets="@estilos/estilos.css">
+         <children>
+            <TextField layoutX="14.0" layoutY="153.0" prefHeight="27.0" prefWidth="288.0" promptText="Ingrese el usuario" />
+            <PasswordField layoutX="14.0" layoutY="202.0" prefHeight="27.0" prefWidth="288.0" promptText="Ingrese su contraseña" />
+            <ComboBox fx:id="comboRol" layoutX="14.0" layoutY="246.0" prefHeight="27.0" prefWidth="288.0" promptText="-Seleccione su rol-" style="-fx-cursor: hand;" stylesheets="@estilos/estilos.css" />
+            <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="267.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/usuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="274.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/contraseña.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="152.0" layoutY="24.0" prefHeight="36.0" prefWidth="87.0" text="Login">
+               <font>
+                  <Font name="Calibri Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="132.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/acceder.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="99.0" layoutY="340.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" style="-fx-border-radius: 15;" styleClass="Acceder" stylesheets="@estilos/estilos.css" text="Ingresar" textFill="#fffcfc" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="24.0" layoutY="55.0" text="Bienvenido a nuestro" textFill="#514545">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="79.0" style="-fx-font-weight: bold;" text="Portal" textFill="#04cdec">
+         <font>
+            <Font name="Segoe UI" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="79.0" style="-fx-font-weight: bold;" text="Veterinario" textFill="#1d1846">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

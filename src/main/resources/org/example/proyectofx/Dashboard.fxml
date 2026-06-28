@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #D1D5DB;">
+         <children>
+            <Label layoutX="76.0" layoutY="28.0" text="Sistema de Gestión Veterinaria">
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="138.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/inicio.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="442.0" layoutY="16.0" text="Bienvenid@" />
+            <Label fx:id="lblUsuario" layoutX="513.0" layoutY="16.0" />
+            <Label fx:id="lblRol" layoutX="474.0" layoutY="34.0" style="-fx-background-color: #5EC5FD;" textFill="WHITE" />
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="407.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/usuario1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
