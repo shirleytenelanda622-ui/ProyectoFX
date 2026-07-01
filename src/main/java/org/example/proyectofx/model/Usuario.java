@@ -1,43 +1,65 @@
 package org.example.proyectofx.model;
 
-import org.example.proyectofx.dao.CRUD;
+public class Usuario extends Persona {
 
-import java.util.ArrayList;
-import java.util.List;
+    private String correo;
+    private String contrasena;
+    private String rol;
 
-public class Usuario extends Persona implements CRUD<Usuario> {
-    private String usuario;
-
-    public Usuario(){
-
+    public Usuario() {
+        super();
     }
+
+    public Usuario(int id, String nombre, String correo, String contrasena, String rol) {
+        super(id, nombre);
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.rol = rol;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public boolean esAdmin() {
+        return "ADMIN".equalsIgnoreCase(rol);
+    }
+
+    public boolean esCajero() {
+        return "CAJERO".equalsIgnoreCase(rol);
+    }
+
+    public boolean esReportes() {
+        return "REPORTES".equalsIgnoreCase(rol);
+    }
+
     @Override
-    public String TipoPersona(){
-        return "Usuario";
+    public String describir() {
+        return "Usuario: " + getNombre() + " (" + rol + ")";
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
     @Override
-    public void guardar(Usuario objeto){
-
-    }
-    @Override
-    public void actualizar(Usuario objeto){
-
-    }
-    @Override
-    public void eliminar(int id){
-
-    }
-    @Override
-    public List<Usuario> listar(){
-        List<Usuario> usuarios = new ArrayList<>();
-        return usuarios;
+    public String toString() {
+        return getNombre() + " - " + rol;
     }
 }

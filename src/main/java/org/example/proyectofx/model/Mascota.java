@@ -5,75 +5,108 @@ import org.example.proyectofx.dao.CRUD;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mascota implements CRUD <Mascota>{
+public class Mascota {
+
+    private int id;
     private String nombre;
+    private String especie;
     private String raza;
     private int edad;
-    private double tamanio;
-    private int vacunas;
+    private String sexo;
+    private double peso;
+    private int idPropietario;
+    private String nombrePropietario; // solo para mostrar en la tabla (join)
 
-    public Mascota(String nombre, String raza, int edad, double tamanio, int vacunas) {
+    public Mascota() {
+    }
+
+    public Mascota(int id, String nombre, String especie, String raza, int edad,
+                   String sexo, double peso, int idPropietario) {
+        this.id = id;
         this.nombre = nombre;
+        this.especie = especie;
         this.raza = raza;
         this.edad = edad;
-        this.tamanio = tamanio;
-        this.vacunas = vacunas;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.idPropietario = idPropietario;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getRaza() {
-        return raza;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public double getTamanio() {
-        return tamanio;
-    }
-
-    public int getVacunas() {
-        return vacunas;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public String getRaza() {
+        return raza;
     }
 
     public void setRaza(String raza) {
         this.raza = raza;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
     public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public void setTamanio(double tamanio) {
-        this.tamanio = tamanio;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setVacunas(int vacunas) {
-        this.vacunas = vacunas;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
-    @Override
-    public void guardar(Mascota objeto){
 
+    public double getPeso() {
+        return peso;
     }
-    @Override
-    public void actualizar(Mascota objeto){
 
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
-    @Override
-    public void eliminar(int id){
 
+    public int getIdPropietario() {
+        return idPropietario;
     }
+
+    public void setIdPropietario(int idPropietario) {
+        this.idPropietario = idPropietario;
+    }
+
+    public String getNombrePropietario() {
+        return nombrePropietario;
+    }
+
+    public void setNombrePropietario(String nombrePropietario) {
+        this.nombrePropietario = nombrePropietario;
+    }
+
     @Override
-    public List<Mascota> listar(){
-        List<Mascota> mascotas = new ArrayList<>();
-        return mascotas;
+    public String toString() {
+        return nombre + " - " + especie;
     }
 }
+

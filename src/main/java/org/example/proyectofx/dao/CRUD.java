@@ -3,8 +3,12 @@ package org.example.proyectofx.dao;
 import java.util.List;
 
 public interface CRUD<T> {
-    void guardar(T objeto);
-    void actualizar(T objeto);
-    void eliminar(int id);
+
+    boolean guardar(T objeto);
+
+    boolean actualizar(T objeto);
+
+    boolean eliminar(int id);
+
     List<T> listar();
 }
