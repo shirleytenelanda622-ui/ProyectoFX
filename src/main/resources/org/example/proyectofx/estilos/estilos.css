@@ -1,11 +1,11 @@
-.Acceder {
+.Ingresar {
     -fx-cursor: hand;
     -fx-background-color: #5DBEFA;
     -fx-border-color: #5DBEFA;
     -fx-border-width: 1;
     -fx-background-radius: 15;
 }
-.Acceder:hover{
+.Ingresar:hover{
     -fx-background-color: #067EC9;
     -fx-border-color: #067EC9;
 }
