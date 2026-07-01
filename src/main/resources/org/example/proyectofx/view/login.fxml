@@ -11,7 +11,7 @@
     </padding>
 
     <ImageView fitHeight="70.0" fitWidth="70.0" preserveRatio="true">
-        <Image url="@../images/logo.png" />
+        <Image url="@../Imagenes/logo.png" />
     </ImageView>
 
     <Label styleClass="titulo-login" text="Sistema Veterinaria" />

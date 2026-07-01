@@ -21,7 +21,7 @@
                 <Insets bottom="10.0" left="18.0" right="18.0" top="10.0" />
             </padding>
             <ImageView fitHeight="34.0" fitWidth="34.0" preserveRatio="true">
-                <Image url="@../images/logo.png" />
+                <Image url="@../Imagenes/login.png" />
             </ImageView>
             <Label styleClass="titulo-app" text="Sistema Veterinaria" />
             <Region HBox.hgrow="ALWAYS" />
