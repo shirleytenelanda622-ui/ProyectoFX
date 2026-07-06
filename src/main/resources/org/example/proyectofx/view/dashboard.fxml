@@ -14,7 +14,6 @@
             xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="org.example.proyectofx.controller.DashboardController">
 
-    <!-- Barra superior: datos del usuario logueado -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="barra-superior">
             <padding>
@@ -31,7 +30,6 @@
         </HBox>
     </top>
 
-    <!-- Menú lateral: se adapta según el rol (setUsuario en el controller) -->
     <left>
         <VBox spacing="8.0" styleClass="menu-lateral">
             <padding>
@@ -44,8 +42,7 @@
         </VBox>
     </left>
 
-    <!-- El centro se reemplaza dinámicamente: aquí se inyecta mascotas.fxml,
-         propietarios.fxml o usuarios.fxml según lo que el usuario elija -->
+
     <center>
         <Label styleClass="placeholder-label" text="Cargando..." />
     </center>

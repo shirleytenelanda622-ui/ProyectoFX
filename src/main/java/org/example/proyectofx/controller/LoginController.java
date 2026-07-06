@@ -12,12 +12,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Controlador de la pantalla de Login.
- * Valida credenciales contra la base de datos y redirige al Dashboard
- * enviándole el objeto Usuario autenticado (así el dashboard sabe qué
- * mostrar según el rol).
- */
 public class LoginController {
 
     @FXML private TextField txtCorreo;
@@ -33,7 +27,7 @@ public class LoginController {
     }
 
     @FXML
-    private void onIngresar(ActionEvent event) {
+    private void Ingresar(ActionEvent event) {
         String correo = txtCorreo.getText() == null ? "" : txtCorreo.getText().trim();
         String contrasena = txtContrasena.getText() == null ? "" : txtContrasena.getText().trim();
 
@@ -57,15 +51,15 @@ public class LoginController {
 
     private void abrirDashboard(Usuario usuario, ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/veterinaria/view/dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/proyectofx/view/dashboard.fxml"));
             Parent root = loader.load();
 
             DashboardController controller = loader.getController();
-            controller.setUsuario(usuario); // se pasa el objeto Usuario completo
+            controller.setUsuario(usuario);
 
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root, 1000, 650);
-            scene.getStylesheets().add(getClass().getResource("/com/veterinaria/css/styles.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/org/example/proyectofx/estilos/estilos.css").toExternalForm());
             stage.setScene(scene);
             stage.setTitle("Veterinaria - Dashboard (" + usuario.getRol() + ")");
             stage.setMinWidth(900);
