@@ -105,7 +105,6 @@ public class MascotasController {
         m.setPeso(Double.parseDouble(txtPeso.getText().trim()));
         m.setIdPropietario(cbPropietario.getValue().getId());
 
-        // Validación: no duplicados
         if (mascotaDAO.existeNombreParaPropietario(m.getNombre(), m.getIdPropietario())) {
             mostrarAlerta(Alert.AlertType.WARNING, "Registro duplicado",
                     "Ya existe una mascota con ese nombre para el propietario seleccionado.");

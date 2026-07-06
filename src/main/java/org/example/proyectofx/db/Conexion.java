@@ -26,10 +26,6 @@ public class Conexion {
         }
     }
 
-    /**
-     * Punto único de acceso a la instancia (patrón Singleton).
-     * Si la conexión se cerró o se perdió, se vuelve a crear.
-     */
     public static Conexion getInstancia() {
         if (instancia == null) {
             instancia = new Conexion();

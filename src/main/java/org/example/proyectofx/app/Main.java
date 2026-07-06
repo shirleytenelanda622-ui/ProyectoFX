@@ -14,10 +14,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/veterinaria/view/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/org/example/proyectofx/view/login.fxml"));
 
         Scene scene = new Scene(root, 480, 420);
-        scene.getStylesheets().add(getClass().getResource("/com/veterinaria/css/styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/org/example/proyectofx/estilos/estilos.css").toExternalForm());
 
         stage.setTitle("Sistema Veterinaria - Login");
         stage.setScene(scene);
