@@ -163,7 +163,7 @@ public class PropietariosController {
             return false;
         }
         String correo = txtCorreo.getText().trim();
-        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}$")){
+        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")){
             mostrarAlerta(Alert.AlertType.ERROR, "Correo incompleto", "Ingrese un correo valido");
             return false;
         }
