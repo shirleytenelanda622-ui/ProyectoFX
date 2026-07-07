@@ -16,7 +16,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/org/example/proyectofx/view/login.fxml"));
 
-        Scene scene = new Scene(root, 480, 420);
+        Scene scene = new Scene(root, 300, 543);
         scene.getStylesheets().add(getClass().getResource("/org/example/proyectofx/estilos/estilos.css").toExternalForm());
 
         stage.setTitle("Sistema Veterinaria - Login");
