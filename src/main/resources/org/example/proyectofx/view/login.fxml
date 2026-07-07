@@ -25,14 +25,14 @@
       <VBox.margin>
          <Insets bottom="10.0" />
       </VBox.margin></Label>
-   <Label fx:id="text" text="Correo:">
+   <Label fx:id="correo" text="Correo:">
       <VBox.margin>
          <Insets bottom="10.0" top="10.0" />
       </VBox.margin>
    </Label>
 
     <TextField fx:id="txtCorreo" promptText="Correo electrónico" styleClass="campo-texto" />
-   <Label fx:id="text" text="Contraseña:">
+   <Label fx:id="pass" text="Contraseña:">
       <VBox.margin>
          <Insets bottom="10.0" top="10.0" />
       </VBox.margin>
