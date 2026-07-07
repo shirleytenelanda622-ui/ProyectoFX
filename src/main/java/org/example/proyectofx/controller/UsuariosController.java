@@ -9,10 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-/**
- * Controlador del módulo "Gestión de usuarios". Visible solo para ADMIN
- * (el DashboardController se encarga de ocultar el botón para los demás roles).
- */
+
 public class UsuariosController {
 
     @FXML private TextField txtNombre;
@@ -84,13 +81,23 @@ public class UsuariosController {
             mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Todos los campos son obligatorios.");
             return false;
         }
-        if (txtContrasena.getText().trim().length() < 6) {
-            mostrarAlerta(Alert.AlertType.WARNING, "Contraseña débil", "La contraseña debe tener al menos 6 caracteres.");
+        String nombre = txtNombre.getText().trim();
+        String correo = txtCorreo.getText().trim();
+        String contrasena = txtContrasena.getText().trim();
+        if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Datos incorrectos", "El nombre solo debe contener letras");
+            return false;
+        }
+        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Correo incorrecto", "El correo debe estar completo");
+            return false;
+        }
+        if(contrasena.length() < 6){
+            mostrarAlerta(Alert.AlertType.ERROR, "Contraseña incompleta", "La contraseña debe contener al menos 6 caracteres");
             return false;
         }
         return true;
     }
-
     private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
         Alert alert = new Alert(tipo);
         alert.setTitle(titulo);

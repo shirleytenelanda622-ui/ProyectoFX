@@ -6,10 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Punto de entrada de la aplicación JavaFX.
- * Carga la ventana de Login al iniciar.
- */
 public class Main extends Application {
 
     @Override

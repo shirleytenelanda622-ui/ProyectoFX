@@ -28,7 +28,7 @@ public class UsuarioDAO implements CRUD<Usuario> {
                             rs.getInt("id_usuario"),
                             rs.getString("nombre"),
                             rs.getString("correo"),
-                            rs.getString("contrasena"),
+                            null,
                             rs.getString("rol")
                     );
                 }

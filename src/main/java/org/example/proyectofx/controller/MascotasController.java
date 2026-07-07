@@ -13,10 +13,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.Optional;
 
-/**
- * Controlador del módulo CRUD principal: Mascotas.
- * Guardar, listar (con TableView), editar y eliminar, con conexión real a la BD.
- */
 public class MascotasController {
 
     @FXML private TextField txtNombre;
@@ -102,7 +98,7 @@ public class MascotasController {
         m.setRaza(txtRaza.getText().trim());
         m.setEdad(Integer.parseInt(txtEdad.getText().trim()));
         m.setSexo(cbSexo.getValue());
-        m.setPeso(Double.parseDouble(txtPeso.getText().trim()));
+        m.setPeso(Double.parseDouble(txtPeso.getText().trim().replace(",", ".")));
         m.setIdPropietario(cbPropietario.getValue().getId());
 
         if (mascotaDAO.existeNombreParaPropietario(m.getNombre(), m.getIdPropietario())) {
@@ -129,12 +125,21 @@ public class MascotasController {
         }
         if (!validarFormulario()) return;
 
+        String nombreNuevo = txtNombre.getText().trim();
+        int idPropietarioNuevo = cbPropietario.getValue().getId();
+        if (!nombreNuevo.equalsIgnoreCase(mascotaSeleccionada.getNombre()) || idPropietarioNuevo != mascotaSeleccionada.getIdPropietario()) {
+            if (mascotaDAO.existeNombreParaPropietario(nombreNuevo, idPropietarioNuevo)) {
+                mostrarAlerta(Alert.AlertType.WARNING, "Registro duplicado", "Este dueño ya tiene registrado una mascota con ese nombre.");
+                return;
+            }
+        }
+
         mascotaSeleccionada.setNombre(txtNombre.getText().trim());
         mascotaSeleccionada.setEspecie(txtEspecie.getText().trim());
         mascotaSeleccionada.setRaza(txtRaza.getText().trim());
         mascotaSeleccionada.setEdad(Integer.parseInt(txtEdad.getText().trim()));
         mascotaSeleccionada.setSexo(cbSexo.getValue());
-        mascotaSeleccionada.setPeso(Double.parseDouble(txtPeso.getText().trim()));
+        mascotaSeleccionada.setPeso(Double.parseDouble(txtPeso.getText().trim().replace(",", ".")));
         mascotaSeleccionada.setIdPropietario(cbPropietario.getValue().getId());
 
         boolean exito = mascotaDAO.actualizar(mascotaSeleccionada);
@@ -145,6 +150,7 @@ public class MascotasController {
         } else {
             mostrarAlerta(Alert.AlertType.ERROR, "Error", "No se pudo actualizar la mascota.");
         }
+        tablaMascotas.refresh();
     }
 
     @FXML
@@ -189,38 +195,55 @@ public class MascotasController {
         tablaMascotas.getSelectionModel().clearSelection();
     }
 
-    /** Validaciones obligatorias: campos vacíos, tipo numérico y valores positivos. */
     private boolean validarFormulario() {
         if (txtNombre.getText() == null || txtNombre.getText().trim().isEmpty()
                 || txtEspecie.getText() == null || txtEspecie.getText().trim().isEmpty()
                 || txtEdad.getText() == null || txtEdad.getText().trim().isEmpty()
                 || cbSexo.getValue() == null
                 || txtPeso.getText() == null || txtPeso.getText().trim().isEmpty()
-                || cbPropietario.getValue() == null) {
-            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos",
-                    "Todos los campos son obligatorios, incluyendo el propietario.");
+                || cbPropietario.getValue() == null || txtRaza.getText().trim().isEmpty()) {
+
+            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Todos los campos son obligatorios.");
+            return false;
+        }
+
+        String nombre = txtNombre.getText().trim();
+        String especie = txtEspecie.getText().trim();
+        String raza = txtRaza.getText().trim();
+
+        if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Nombre inválido", "El nombre solo debe contener letras.");
+            return false;
+        }
+        if (!especie.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Especie inválida", "La especie solo debe contener letras.");
+            return false;
+        }
+
+        if (!raza.isEmpty() && !raza.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Raza inválida", "La raza solo debe contener letras.");
             return false;
         }
 
         try {
-            int edad = Integer.parseInt(txtEdad.getText().trim());
-            if (edad <= 0) {
-                mostrarAlerta(Alert.AlertType.WARNING, "Valor inválido", "La edad debe ser un número positivo.");
+            int edadVal = Integer.parseInt(txtEdad.getText().trim());
+            if (edadVal < 0 || edadVal > 40) {
+                mostrarAlerta(Alert.AlertType.ERROR, "Edad inválida", "Ingrese una edad numérica realista (0 a 40 años).");
                 return false;
             }
         } catch (NumberFormatException e) {
-            mostrarAlerta(Alert.AlertType.ERROR, "Tipo de dato inválido", "La edad debe ser un valor numérico.");
+            mostrarAlerta(Alert.AlertType.ERROR, "Formato erróneo", "La edad debe ser un número entero.");
             return false;
         }
 
         try {
-            double peso = Double.parseDouble(txtPeso.getText().trim());
-            if (peso <= 0) {
-                mostrarAlerta(Alert.AlertType.WARNING, "Valor inválido", "El peso debe ser un número positivo.");
+            double pesoVal = Double.parseDouble(txtPeso.getText().trim().replace(",", "."));
+            if (pesoVal <= 0 || pesoVal > 200) {
+                mostrarAlerta(Alert.AlertType.ERROR, "Peso inválido", "El peso debe ser mayor a 0 y menor a 200 kg.");
                 return false;
             }
         } catch (NumberFormatException e) {
-            mostrarAlerta(Alert.AlertType.ERROR, "Tipo de dato inválido", "El peso debe ser un valor numérico.");
+            mostrarAlerta(Alert.AlertType.ERROR, "Formato erróneo", "El peso debe ser un valor decimal válido.");
             return false;
         }
 
@@ -235,3 +258,4 @@ public class MascotasController {
         alert.showAndWait();
     }
 }
+

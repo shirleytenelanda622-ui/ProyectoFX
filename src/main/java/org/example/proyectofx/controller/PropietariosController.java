@@ -11,9 +11,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.Optional;
 
-/**
- * Controlador del módulo CRUD de Propietarios (tabla relacionada con Mascotas).
- */
 public class PropietariosController {
 
     @FXML private TextField txtCedula;
@@ -95,6 +92,13 @@ public class PropietariosController {
             return;
         }
         if (!validarFormulario()) return;
+        String cedulaNueva = txtCedula.getText().trim();
+        if(cedulaNueva.equals(propietarioSeleccionado.getCedula())){
+            if(propietarioDAO.existeCedula(cedulaNueva)){
+                mostrarAlerta(Alert.AlertType.WARNING, "Registro duplicado", "Ya existe un propetario con esa cedula");
+                return;
+            }
+        }
 
         propietarioSeleccionado.setCedula(txtCedula.getText().trim());
         propietarioSeleccionado.setNombre(txtNombre.getText().trim());
@@ -154,32 +158,35 @@ public class PropietariosController {
 
     private boolean validarFormulario() {
         if (txtCedula.getText() == null || txtCedula.getText().trim().isEmpty()
-                || txtNombre.getText() == null || txtNombre.getText().trim().isEmpty()) {
-            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Cédula y nombre son obligatorios.");
+                || txtNombre.getText() == null || txtNombre.getText().trim().isEmpty()
+                || txtTelefono.getText() == null || txtTelefono.getText().trim().isEmpty()
+                || txtDireccion.getText() == null || txtDireccion.getText().trim().isEmpty()
+                || txtCorreo.getText() == null || txtCorreo.getText().trim().isEmpty()) {
+            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Llenar todos los campos obligatorios.");
             return false;
         }
         if (!txtCedula.getText().trim().matches("\\d{10}")) {
             mostrarAlerta(Alert.AlertType.ERROR, "Formato inválido", "La cédula debe tener 10 dígitos numéricos.");
             return false;
         }
-        String correo = txtCorreo.getText().trim();
-        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")){
-            mostrarAlerta(Alert.AlertType.ERROR, "Correo incompleto", "Ingrese un correo valido");
+        String nombre = txtNombre.getText().trim();
+        if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Datos invalidos", "El nombre solo debe contener letras");
             return false;
         }
         String telefono = txtTelefono.getText().trim();
-        if(telefono.length() != 10){
-            mostrarAlerta(Alert.AlertType.ERROR, "Telefono incompleto", "El telefono debe contner 10 parametros");
+        if(!telefono.matches("\\d{10}")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Telefono invalido", "El teléfono debe contener exactamente 10 dígitos.");
             return false;
         }
-        String cedula = txtCedula.getText().trim();
-        if(!telefono.matches("\\d+") || !cedula.matches("\\d+")){
-            mostrarAlerta(Alert.AlertType.ERROR, "Valores incorrectos", "Debe ingresar solo números");
+        String direccion = txtDireccion.getText().trim();
+        if (direccion.length() < 5) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Dirección inválida", "Ingrese una dirección válida.");
             return false;
         }
-        String nombre = txtNombre.getText().trim();
-        if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")){
-            mostrarAlerta(Alert.AlertType.ERROR, "Datos incorrectos", "El nombre solo debe contener letras");
+        String correo = txtCorreo.getText().trim();
+        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Correo invalido", "Ingrese un correo valido");
             return false;
         }
         return true;

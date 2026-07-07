@@ -31,7 +31,6 @@ public class LoginController {
         String correo = txtCorreo.getText() == null ? "" : txtCorreo.getText().trim();
         String contrasena = txtContrasena.getText() == null ? "" : txtContrasena.getText().trim();
 
-        // Validación: campos vacíos
         if (correo.isEmpty() || contrasena.isEmpty()) {
             mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos",
                     "Debe ingresar correo y contraseña.");
