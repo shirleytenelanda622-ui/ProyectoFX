@@ -162,6 +162,26 @@ public class PropietariosController {
             mostrarAlerta(Alert.AlertType.ERROR, "Formato inválido", "La cédula debe tener 10 dígitos numéricos.");
             return false;
         }
+        String correo = txtCorreo.getText().trim();
+        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}$")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Correo incompleto", "Ingrese un correo valido");
+            return false;
+        }
+        String telefono = txtTelefono.getText().trim();
+        if(telefono.length() != 10){
+            mostrarAlerta(Alert.AlertType.ERROR, "Telefono incompleto", "El telefono debe contner 10 parametros");
+            return false;
+        }
+        String cedula = txtCedula.getText().trim();
+        if(!telefono.matches("\\d+") || !cedula.matches("\\d+")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Valores incorrectos", "Debe ingresar solo números");
+            return false;
+        }
+        String nombre = txtNombre.getText().trim();
+        if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")){
+            mostrarAlerta(Alert.AlertType.ERROR, "Datos incorrectos", "El nombre solo debe contener letras");
+            return false;
+        }
         return true;
     }
 
