@@ -19,6 +19,7 @@
             <ColumnConstraints percentWidth="25" />
         </columnConstraints>
 
+
         <TextField fx:id="txtNombre" promptText="Nombre mascota" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <TextField fx:id="txtEspecie" promptText="Especie" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <TextField fx:id="txtRaza" promptText="Raza" styleClass="campo-texto" GridPane.columnIndex="2" GridPane.rowIndex="0" />

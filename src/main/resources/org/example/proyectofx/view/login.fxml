@@ -31,6 +31,8 @@
       </VBox.margin>
    </Label>
 
+
+
     <TextField fx:id="txtCorreo" promptText="Correo electrónico" styleClass="campo-texto" />
    <Label fx:id="pass" text="Contraseña:">
       <VBox.margin>

@@ -24,6 +24,7 @@
         </HBox>
     </top>
 
+
     <left>
         <VBox spacing="8.0" styleClass="menu-lateral">
             <padding>

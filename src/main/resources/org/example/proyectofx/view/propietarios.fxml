@@ -20,6 +20,7 @@
             <ColumnConstraints percentWidth="20" />
         </columnConstraints>
 
+
         <TextField fx:id="txtCedula" promptText="Cédula" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <TextField fx:id="txtNombre" promptText="Nombre completo" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <TextField fx:id="txtTelefono" promptText="Teléfono" styleClass="campo-texto" GridPane.columnIndex="2" GridPane.rowIndex="0" />

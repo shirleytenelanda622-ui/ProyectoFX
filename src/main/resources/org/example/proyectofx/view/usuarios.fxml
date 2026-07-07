@@ -28,6 +28,7 @@
       </rowConstraints>
     </GridPane>
 
+
     <HBox spacing="10.0">
         <Button fx:id="crear" onAction="#onGuardar" styleClass="boton-primario" text="Crear usuario" />
         <Button fx:id="limpiar" onAction="#onLimpiar" styleClass="boton-secundario" text="Limpiar" />
