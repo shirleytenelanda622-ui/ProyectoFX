@@ -17,7 +17,6 @@
     <Label text="Gestión de Propietarios"
            styleClass="titulo-modulo"/>
 
-    <!-- DATOS -->
 
     <TitledPane text="Datos del propietario"
                 expanded="true"
@@ -34,7 +33,6 @@
                     <ColumnConstraints percentWidth="34"/>
                 </columnConstraints>
 
-                <!-- FILA 1 -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="0"
@@ -72,7 +70,6 @@
 
                 </VBox>
 
-                <!-- FILA 2 -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="0"
@@ -105,7 +102,6 @@
 
     </TitledPane>
 
-    <!-- BOTONES -->
 
     <HBox spacing="12"
           alignment="CENTER_LEFT">
@@ -140,7 +136,6 @@
 
     </HBox>
 
-    <!-- TABLA -->
 
     <TitledPane text="Listado de propietarios"
                 expanded="true"

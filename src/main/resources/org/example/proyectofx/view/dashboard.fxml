@@ -11,7 +11,6 @@
             fx:controller="org.example.proyectofx.controller.DashboardController"
             styleClass="root-dashboard">
 
-    <!-- ================= BARRA SUPERIOR ================= -->
 
     <top>
         <HBox alignment="CENTER_LEFT"
@@ -61,7 +60,6 @@
         </HBox>
     </top>
 
-    <!-- ================= MENÚ ================= -->
 
     <left>
 
