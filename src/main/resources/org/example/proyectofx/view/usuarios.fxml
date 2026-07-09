@@ -4,42 +4,155 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="16.0" styleClass="contenido-modulo" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.controller.UsuariosController">
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectofx.controller.UsuariosController"
+      spacing="18"
+      styleClass="contenido-modulo">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label styleClass="titulo-modulo" text="Gestión de Usuarios (solo Administrador)" />
+    <!-- TÍTULO -->
 
-    <GridPane hgap="12.0" vgap="10.0">
-        <columnConstraints>
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-        </columnConstraints>
+    <Label text="Gestión de Usuarios"
+           styleClass="titulo-modulo"/>
 
-        <TextField fx:id="txtNombre" promptText="Nombre completo" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField fx:id="txtCorreo" promptText="Correo" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <PasswordField fx:id="txtContrasena" promptText="Contraseña (mín. 6)" styleClass="campo-texto" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-        <ComboBox fx:id="cbRol" maxWidth="Infinity" promptText="Rol" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
-    </GridPane>
+    <!-- DATOS -->
 
+    <TitledPane text="Datos del usuario"
+                expanded="true"
+                collapsible="false">
 
-    <HBox spacing="10.0">
-        <Button fx:id="crear" onAction="#onGuardar" styleClass="boton-primario" text="Crear usuario" />
-        <Button fx:id="limpiar" onAction="#onLimpiar" styleClass="boton-secundario" text="Limpiar" />
+        <content>
+
+            <GridPane hgap="15"
+                      vgap="12">
+
+                <columnConstraints>
+
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+
+                </columnConstraints>
+
+                <!-- NOMBRE -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="0"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Nombre completo"/>
+
+                    <TextField fx:id="txtNombre"
+                               promptText="Ingrese el nombre"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <!-- CORREO -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="1"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Correo electrónico"/>
+
+                    <TextField fx:id="txtCorreo"
+                               promptText="correo@ejemplo.com"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <!-- CONTRASEÑA -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="2"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Contraseña"/>
+
+                    <PasswordField fx:id="txtContrasena"
+                                   promptText="Mínimo 6 caracteres"
+                                   styleClass="campo-texto"/>
+
+                </VBox>
+
+                <!-- ROL -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="3"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Rol"/>
+
+                    <ComboBox fx:id="cbRol"
+                              promptText="Seleccione"
+                              maxWidth="Infinity"/>
+
+                </VBox>
+
+            </GridPane>
+
+        </content>
+
+    </TitledPane>
+
+    <!-- BOTONES -->
+
+    <HBox spacing="12"
+          alignment="CENTER_LEFT">
+
+        <Button fx:id="crear"
+                text="Crear usuario"
+                prefWidth="140"
+                prefHeight="40"
+                onAction="#onGuardar"
+                styleClass="boton-primario"/>
+
+        <Button fx:id="limpiar"
+                text="Limpiar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onLimpiar"
+                styleClass="boton-secundario"/>
+
     </HBox>
 
-    <TableView fx:id="tablaUsuarios" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="77.0" text="ID" />
-            <TableColumn fx:id="colNombre" prefWidth="174.0" text="Nombre" />
-            <TableColumn fx:id="colCorreo" prefWidth="193.0" text="Correo" />
-            <TableColumn fx:id="colRol" prefWidth="151.0" text="Rol" />
-        </columns>
-    </TableView>
+    <!-- TABLA -->
+
+    <TitledPane text="Usuarios registrados"
+                expanded="true"
+                collapsible="false"
+                VBox.vgrow="ALWAYS">
+
+        <content>
+
+            <TableView fx:id="tablaUsuarios">
+
+                <columns>
+
+                    <TableColumn fx:id="colId"
+                                 text="ID"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"/>
+
+                    <TableColumn fx:id="colCorreo"
+                                 text="Correo"/>
+
+                    <TableColumn fx:id="colRol"
+                                 text="Rol"/>
+
+                </columns>
+
+            </TableView>
+
+        </content>
+
+    </TitledPane>
+
 </VBox>

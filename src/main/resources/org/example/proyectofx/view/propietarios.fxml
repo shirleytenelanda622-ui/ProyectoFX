@@ -4,48 +4,179 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="16.0" styleClass="contenido-modulo" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.controller.PropietariosController">
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectofx.controller.PropietariosController"
+      spacing="18"
+      styleClass="contenido-modulo">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label styleClass="titulo-modulo" text="Gestión de Propietarios" />
+    <Label text="Gestión de Propietarios"
+           styleClass="titulo-modulo"/>
 
-    <GridPane hgap="12.0" vgap="10.0">
-        <columnConstraints>
-            <ColumnConstraints percentWidth="20" />
-            <ColumnConstraints percentWidth="20" />
-            <ColumnConstraints percentWidth="20" />
-            <ColumnConstraints percentWidth="20" />
-            <ColumnConstraints percentWidth="20" />
-        </columnConstraints>
+    <!-- DATOS -->
 
+    <TitledPane text="Datos del propietario"
+                expanded="true"
+                collapsible="false">
 
-        <TextField fx:id="txtCedula" promptText="Cédula" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField fx:id="txtNombre" promptText="Nombre completo" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <TextField fx:id="txtTelefono" promptText="Teléfono" styleClass="campo-texto" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-        <TextField fx:id="txtDireccion" promptText="Dirección" styleClass="campo-texto" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-        <TextField fx:id="txtCorreo" promptText="Correo" styleClass="campo-texto" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
-    </GridPane>
+        <content>
 
-    <HBox spacing="10.0">
-        <Button fx:id="guardar" onAction="#onGuardar" styleClass="boton-primario" text="Guardar" />
-        <Button fx:id="editar" onAction="#onActualizar" styleClass="boton-secundario" text="Editar" />
-        <Button fx:id="eliminar" onAction="#onEliminar" styleClass="boton-peligro" text="Eliminar" />
-        <Button fx:id="limpiar" onAction="#onLimpiar" styleClass="boton-secundario" text="Limpiar" />
+            <GridPane hgap="15"
+                      vgap="12">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="33"/>
+                    <ColumnConstraints percentWidth="33"/>
+                    <ColumnConstraints percentWidth="34"/>
+                </columnConstraints>
+
+                <!-- FILA 1 -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="0"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Cédula"/>
+
+                    <TextField fx:id="txtCedula"
+                               promptText="Ingrese la cédula"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="1"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Nombre completo"/>
+
+                    <TextField fx:id="txtNombre"
+                               promptText="Nombre del propietario"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="2"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Teléfono"/>
+
+                    <TextField fx:id="txtTelefono"
+                               promptText="Número telefónico"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <!-- FILA 2 -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="0"
+                      GridPane.columnSpan="2"
+                      GridPane.rowIndex="1">
+
+                    <Label text="Dirección"/>
+
+                    <TextField fx:id="txtDireccion"
+                               promptText="Dirección"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="2"
+                      GridPane.rowIndex="1">
+
+                    <Label text="Correo electrónico"/>
+
+                    <TextField fx:id="txtCorreo"
+                               promptText="correo@ejemplo.com"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+            </GridPane>
+
+        </content>
+
+    </TitledPane>
+
+    <!-- BOTONES -->
+
+    <HBox spacing="12"
+          alignment="CENTER_LEFT">
+
+        <Button fx:id="guardar"
+                text="Guardar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onGuardar"
+                styleClass="boton-primario"/>
+
+        <Button fx:id="editar"
+                text="Editar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onActualizar"
+                styleClass="boton-secundario"/>
+
+        <Button fx:id="eliminar"
+                text="Eliminar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onEliminar"
+                styleClass="boton-peligro"/>
+
+        <Button fx:id="limpiar"
+                text="Limpiar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onLimpiar"
+                styleClass="boton-secundario"/>
+
     </HBox>
 
-    <TableView fx:id="tablaPropietarios" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
-            <TableColumn fx:id="colCedula" prefWidth="111.0" text="Cédula" />
-            <TableColumn fx:id="colNombre" prefWidth="155.0" text="Nombre" />
-            <TableColumn fx:id="colTelefono" prefWidth="128.0" text="Teléfono" />
-            <TableColumn fx:id="colDireccion" prefWidth="172.0" text="Dirección" />
-            <TableColumn fx:id="colCorreo" prefWidth="176.0" text="Correo" />
-        </columns>
-    </TableView>
+    <!-- TABLA -->
+
+    <TitledPane text="Listado de propietarios"
+                expanded="true"
+                collapsible="false"
+                VBox.vgrow="ALWAYS">
+
+        <content>
+
+            <TableView fx:id="tablaPropietarios">
+
+                <columns>
+
+                    <TableColumn fx:id="colId"
+                                 text="ID"/>
+
+                    <TableColumn fx:id="colCedula"
+                                 text="Cédula"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"/>
+
+                    <TableColumn fx:id="colTelefono"
+                                 text="Teléfono"/>
+
+                    <TableColumn fx:id="colDireccion"
+                                 text="Dirección"/>
+
+                    <TableColumn fx:id="colCorreo"
+                                 text="Correo"/>
+
+                </columns>
+
+            </TableView>
+
+        </content>
+
+    </TitledPane>
+
 </VBox>

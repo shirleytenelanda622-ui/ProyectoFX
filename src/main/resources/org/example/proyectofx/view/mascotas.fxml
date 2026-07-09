@@ -4,53 +4,210 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="16.0" styleClass="contenido-modulo" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.controller.MascotasController">
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectofx.controller.MascotasController"
+      spacing="18"
+      styleClass="contenido-modulo">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label styleClass="titulo-modulo" text="Gestión de Mascotas" />
+    <Label text="Gestión de Mascotas"
+           styleClass="titulo-modulo"/>
 
-    <GridPane hgap="12.0" vgap="10.0">
-        <columnConstraints>
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-            <ColumnConstraints percentWidth="25" />
-        </columnConstraints>
+    <!-- DATOS -->
 
+    <TitledPane text="Datos de la mascota"
+                expanded="true"
+                collapsible="false">
 
-        <TextField fx:id="txtNombre" promptText="Nombre mascota" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField fx:id="txtEspecie" promptText="Especie" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <TextField fx:id="txtRaza" promptText="Raza" styleClass="campo-texto" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-        <ComboBox fx:id="cbSexo" maxWidth="Infinity" promptText="Sexo" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <content>
 
-        <TextField fx:id="txtEdad" promptText="Edad (años)" styleClass="campo-texto" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <TextField fx:id="txtPeso" promptText="Peso (kg)" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <ComboBox fx:id="cbPropietario" maxWidth="Infinity" promptText="Propietario" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-      <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-      </rowConstraints>
-    </GridPane>
+            <GridPane hgap="15"
+                      vgap="12">
 
-    <HBox spacing="10.0">
-        <Button fx:id="guardar" onAction="#onGuardar" styleClass="boton-primario" text="Guardar" />
-        <Button fx:id="editar" onAction="#onActualizar" styleClass="boton-secundario" text="Editar" />
-        <Button fx:id="eliminar" onAction="#onEliminar" styleClass="boton-peligro" text="Eliminar" />
-        <Button fx:id="limpiar" onAction="#onLimpiar" styleClass="boton-secundario" text="Limpiar" />
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="25"/>
+                </columnConstraints>
+
+                <!-- FILA 1 -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="0"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Nombre"/>
+
+                    <TextField fx:id="txtNombre"
+                               promptText="Nombre de la mascota"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="1"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Especie"/>
+
+                    <TextField fx:id="txtEspecie"
+                               promptText="Perro, gato..."
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="2"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Raza"/>
+
+                    <TextField fx:id="txtRaza"
+                               promptText="Raza"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="3"
+                      GridPane.rowIndex="0">
+
+                    <Label text="Sexo"/>
+
+                    <ComboBox fx:id="cbSexo"
+                              promptText="Seleccione"
+                              maxWidth="Infinity"/>
+
+                </VBox>
+
+                <!-- FILA 2 -->
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="0"
+                      GridPane.rowIndex="1">
+
+                    <Label text="Edad"/>
+
+                    <TextField fx:id="txtEdad"
+                               promptText="Años"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="1"
+                      GridPane.rowIndex="1">
+
+                    <Label text="Peso"/>
+
+                    <TextField fx:id="txtPeso"
+                               promptText="Kg"
+                               styleClass="campo-texto"/>
+
+                </VBox>
+
+                <VBox spacing="5"
+                      GridPane.columnIndex="2"
+                      GridPane.columnSpan="2"
+                      GridPane.rowIndex="1">
+
+                    <Label text="Propietario"/>
+
+                    <ComboBox fx:id="cbPropietario"
+                              promptText="Seleccione un propietario"
+                              maxWidth="Infinity"/>
+
+                </VBox>
+
+            </GridPane>
+
+        </content>
+
+    </TitledPane>
+
+    <!-- BOTONES -->
+
+    <HBox alignment="CENTER_LEFT"
+          spacing="12">
+
+        <Button fx:id="guardar"
+                text="Guardar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onGuardar"
+                styleClass="boton-primario"/>
+
+        <Button fx:id="editar"
+                text="Editar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onActualizar"
+                styleClass="boton-secundario"/>
+
+        <Button fx:id="eliminar"
+                text="Eliminar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onEliminar"
+                styleClass="boton-peligro"/>
+
+        <Button fx:id="limpiar"
+                text="Limpiar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onLimpiar"
+                styleClass="boton-secundario"/>
+
     </HBox>
 
-    <TableView fx:id="tablaMascotas" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
-            <TableColumn fx:id="colNombre" prefWidth="120.0" text="Nombre" />
-            <TableColumn fx:id="colEspecie" prefWidth="100.0" text="Especie" />
-            <TableColumn fx:id="colRaza" prefWidth="100.0" text="Raza" />
-            <TableColumn fx:id="colEdad" prefWidth="70.0" text="Edad" />
-            <TableColumn fx:id="colSexo" prefWidth="80.0" text="Sexo" />
-            <TableColumn fx:id="colPeso" prefWidth="80.0" text="Peso" />
-            <TableColumn fx:id="colPropietario" prefWidth="150.0" text="Propietario" />
-        </columns>
-    </TableView>
+    <!-- TABLA -->
+
+    <TitledPane text="Listado de mascotas"
+                expanded="true"
+                collapsible="false"
+                VBox.vgrow="ALWAYS">
+
+        <content>
+
+            <TableView fx:id="tablaMascotas">
+
+                <columns>
+
+                    <TableColumn fx:id="colId"
+                                 text="ID"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"/>
+
+                    <TableColumn fx:id="colEspecie"
+                                 text="Especie"/>
+
+                    <TableColumn fx:id="colRaza"
+                                 text="Raza"/>
+
+                    <TableColumn fx:id="colEdad"
+                                 text="Edad"/>
+
+                    <TableColumn fx:id="colSexo"
+                                 text="Sexo"/>
+
+                    <TableColumn fx:id="colPeso"
+                                 text="Peso"/>
+
+                    <TableColumn fx:id="colPropietario"
+                                 text="Propietario"/>
+
+                </columns>
+
+            </TableView>
+
+        </content>
+
+    </TitledPane>
+
 </VBox>
