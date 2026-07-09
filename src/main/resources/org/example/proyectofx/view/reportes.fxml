@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectofx.controller.ReportesController"
+      spacing="18"
+      styleClass="contenido-modulo">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Reportes de Consultas"
+           styleClass="titulo-modulo"/>
+
+
+    <TitledPane text="Resumen general"
+                expanded="true"
+                collapsible="false">
+
+        <content>
+
+            <HBox spacing="30" alignment="CENTER_LEFT">
+
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <VBox spacing="4">
+                    <Label text="Consultas registradas"/>
+                    <Label fx:id="lblTotalConsultas" text="0" styleClass="titulo-modulo"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Mascotas registradas"/>
+                    <Label fx:id="lblTotalMascotas" text="0" styleClass="titulo-modulo"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Ingreso total"/>
+                    <Label fx:id="lblIngresoTotal" text="\$0.00" styleClass="titulo-modulo"/>
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button text="Actualizar"
+                        onAction="#onActualizar"
+                        styleClass="boton-secundario"/>
+
+            </HBox>
+
+        </content>
+
+    </TitledPane>
+
+
+    <TitledPane text="Historial de consultas (solo lectura)"
+                expanded="true"
+                collapsible="false"
+                VBox.vgrow="ALWAYS">
+
+        <content>
+
+            <TableView fx:id="tablaConsultas">
+
+                <columns>
+
+                    <TableColumn fx:id="colId" text="ID"/>
+                    <TableColumn fx:id="colFecha" text="Fecha"/>
+                    <TableColumn fx:id="colMascota" text="Mascota"/>
+                    <TableColumn fx:id="colPropietario" text="Propietario"/>
+                    <TableColumn fx:id="colDiagnostico" text="Diagnóstico"/>
+                    <TableColumn fx:id="colTratamiento" text="Tratamiento"/>
+                    <TableColumn fx:id="colCosto" text="Costo"/>
+                    <TableColumn fx:id="colUsuario" text="Atendido por"/>
+
+                </columns>
+
+            </TableView>
+
+        </content>
+
+    </TitledPane>
+
+</VBox>
