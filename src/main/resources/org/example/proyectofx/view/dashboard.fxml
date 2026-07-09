@@ -5,40 +5,128 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="contenedorPrincipal" styleClass="root-dashboard" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.controller.DashboardController">
+<BorderPane fx:id="contenedorPrincipal"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.proyectofx.controller.DashboardController"
+            styleClass="root-dashboard">
+
+    <!-- ================= BARRA SUPERIOR ================= -->
 
     <top>
-        <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="barra-superior">
+        <HBox alignment="CENTER_LEFT"
+              spacing="15"
+              styleClass="barra-superior">
+
             <padding>
-                <Insets bottom="10.0" left="18.0" right="18.0" top="10.0" />
+                <Insets top="12" right="20" bottom="12" left="20"/>
             </padding>
-            <ImageView fitHeight="34.0" fitWidth="34.0" preserveRatio="true">
-                <Image url="@../Imagenes/login.png" />
+
+            <ImageView fitHeight="40"
+                       fitWidth="40"
+                       preserveRatio="true">
+                <Image url="@../Imagenes/login.png"/>
             </ImageView>
-            <Label styleClass="titulo-app" text="Sistema Veterinaria" />
-            <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="lblNombreUsuario" styleClass="usuario-nombre" text="Usuario" />
-            <Label fx:id="lblRolUsuario" styleClass="usuario-rol" text="ROL " />
-         <Label fx:id="foco" text="💡" textFill="#348633" />
-            <Button fx:id="btnCerrarSesion" onAction="#onCerrarSesion" styleClass="boton-secundario" text="Cerrar sesión" />
+
+            <VBox spacing="2">
+
+                <Label text="Sistema Veterinaria"
+                       styleClass="titulo-app"/>
+
+                <Label text="Sistema de Gestión"
+                       styleClass="subtitulo-app"/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <VBox alignment="CENTER_RIGHT"
+                  spacing="2">
+
+                <Label fx:id="lblNombreUsuario"
+                       text="Usuario"
+                       styleClass="usuario-nombre"/>
+
+                <Label fx:id="lblRolUsuario"
+                       text="Administrador"
+                       styleClass="usuario-rol"/>
+
+            </VBox>
+
+            <Button fx:id="btnCerrarSesion"
+                    text="Cerrar sesión"
+                    onAction="#onCerrarSesion"
+                    styleClass="boton-secundario"/>
+
         </HBox>
     </top>
 
+    <!-- ================= MENÚ ================= -->
 
     <left>
-        <VBox spacing="8.0" styleClass="menu-lateral">
+
+        <VBox spacing="15"
+              prefWidth="220"
+              styleClass="menu-lateral">
+
             <padding>
-                <Insets bottom="20.0" left="14.0" right="14.0" top="20.0" />
+                <Insets top="20" right="15" bottom="20" left="15"/>
             </padding>
-            <Button fx:id="btnMascotas" maxWidth="Infinity" onAction="#onMascotas" prefHeight="40.0" prefWidth="110.0" styleClass="boton-menu" text="Mascotas" />
-            <Button fx:id="btnPropietarios" maxWidth="Infinity" onAction="#onPropietarios" prefHeight="40.0" prefWidth="90.0" styleClass="boton-menu" text="Propietarios" />
-            <Button fx:id="btnUsuarios" maxWidth="Infinity" onAction="#onUsuarios" prefHeight="40.0" styleClass="boton-menu" text="Usuarios" />
-            <Button fx:id="btnReportes" maxWidth="Infinity" onAction="#onReportes" prefHeight="40.0" styleClass="boton-menu" text="Reportes" />
+
+            <Label text="MENÚ"
+                   styleClass="titulo-menu"/>
+
+            <Separator/>
+
+            <Button fx:id="btnMascotas"
+                    text="🐶 Mascotas"
+                    maxWidth="Infinity"
+                    prefHeight="42"
+                    onAction="#onMascotas"
+                    styleClass="boton-menu"/>
+
+            <Button fx:id="btnPropietarios"
+                    text="👤 Propietarios"
+                    maxWidth="Infinity"
+                    prefHeight="42"
+                    onAction="#onPropietarios"
+                    styleClass="boton-menu"/>
+
+            <Button fx:id="btnUsuarios"
+                    text="👥 Usuarios"
+                    maxWidth="Infinity"
+                    prefHeight="42"
+                    onAction="#onUsuarios"
+                    styleClass="boton-menu"/>
+
+            <Button fx:id="btnReportes"
+                    text="📊 Reportes"
+                    maxWidth="Infinity"
+                    prefHeight="42"
+                    onAction="#onReportes"
+                    styleClass="boton-menu"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Separator/>
+
+            <Label text="Programación Orientada a Objetos"
+                   wrapText="true"
+                   styleClass="texto-footer"/>
+
         </VBox>
+
     </left>
 
-
     <center>
-        <Label styleClass="placeholder-label" text="Cargando..." />
+
+        <StackPane styleClass="panel-contenido">
+
+            <Label text="Seleccione una opción del menú"
+                   styleClass="placeholder-label"/>
+
+        </StackPane>
+
     </center>
+
 </BorderPane>

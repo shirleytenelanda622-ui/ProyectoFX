@@ -5,43 +5,81 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="contenedor" alignment="CENTER" prefWidth="300.0" spacing="14.0" styleClass="root-login" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectofx.controller.LoginController">
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectofx.controller.LoginController"
+      fx:id="contenedor"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="420"
+      styleClass="root-login">
+
     <padding>
-        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+        <Insets top="35"
+                right="45"
+                bottom="35"
+                left="45"/>
     </padding>
 
-    <ImageView fitHeight="101.0" fitWidth="125.0" preserveRatio="true">
-        <Image url="@../Imagenes/logo.png" />
-      <VBox.margin>
-         <Insets bottom="10.0" />
-      </VBox.margin>
+
+    <ImageView fitHeight="110"
+               fitWidth="110"
+               preserveRatio="true">
+
+        <Image url="@../Imagenes/logo.png"/>
+
     </ImageView>
 
-    <Label fx:id="titulo" styleClass="titulo-login" text="Sistema Veterinaria">
-      <VBox.margin>
-         <Insets bottom="15.0" />
-      </VBox.margin></Label>
-    <Label fx:id="text" styleClass="subtitulo-login" text="Ingrese sus credenciales">
-      <VBox.margin>
-         <Insets bottom="10.0" />
-      </VBox.margin></Label>
-   <Label fx:id="correo" text="Correo:">
-      <VBox.margin>
-         <Insets bottom="10.0" top="10.0" />
-      </VBox.margin>
-   </Label>
+
+    <Label fx:id="titulo"
+           text="Sistema Veterinaria"
+           styleClass="titulo-login"/>
+
+    <Label fx:id="text"
+           text="Ingrese sus credenciales"
+           styleClass="subtitulo-login"/>
+
+    <Separator/>
 
 
+    <VBox spacing="6"
+          fillWidth="true">
 
-    <TextField fx:id="txtCorreo" promptText="Correo electrónico" styleClass="campo-texto" />
-   <Label fx:id="pass" text="Contraseña:">
-      <VBox.margin>
-         <Insets bottom="10.0" top="10.0" />
-      </VBox.margin>
-   </Label>
-    <PasswordField fx:id="txtContrasena" promptText="Contraseña" styleClass="campo-texto" />
+        <Label fx:id="correo"
+               text="Correo electrónico"/>
 
-    <Button fx:id="Ingresar" defaultButton="true" onAction="#Ingresar" prefHeight="40.0" prefWidth="150.0" styleClass="boton-primario" text="Ingresar" />
+        <TextField fx:id="txtCorreo"
+                   promptText="correo@ejemplo.com"
+                   styleClass="campo-texto"/>
 
-    <Label fx:id="lblMensaje" styleClass="mensaje-error" />
+    </VBox>
+
+
+    <VBox spacing="6"
+          fillWidth="true">
+
+        <Label fx:id="pass"
+               text="Contraseña"/>
+
+        <PasswordField fx:id="txtContrasena"
+                       promptText="Ingrese su contraseña"
+                       styleClass="campo-texto"/>
+
+    </VBox>
+
+
+    <Button fx:id="Ingresar"
+            text="Ingresar"
+            prefWidth="180"
+            prefHeight="42"
+            defaultButton="true"
+            onAction="#Ingresar"
+            styleClass="boton-primario"/>
+
+    <Label fx:id="lblMensaje"
+           wrapText="true"
+           maxWidth="300"
+           alignment="CENTER"
+           styleClass="mensaje-error"/>
+
 </VBox>
