@@ -14,12 +14,10 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <!-- TÍTULO -->
 
     <Label text="Gestión de Usuarios"
            styleClass="titulo-modulo"/>
 
-    <!-- DATOS -->
 
     <TitledPane text="Datos del usuario"
                 expanded="true"
@@ -39,7 +37,6 @@
 
                 </columnConstraints>
 
-                <!-- NOMBRE -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="0"
@@ -53,7 +50,6 @@
 
                 </VBox>
 
-                <!-- CORREO -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="1"
@@ -67,7 +63,6 @@
 
                 </VBox>
 
-                <!-- CONTRASEÑA -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="2"
@@ -81,7 +76,6 @@
 
                 </VBox>
 
-                <!-- ROL -->
 
                 <VBox spacing="5"
                       GridPane.columnIndex="3"
@@ -101,7 +95,6 @@
 
     </TitledPane>
 
-    <!-- BOTONES -->
 
     <HBox spacing="12"
           alignment="CENTER_LEFT">
@@ -113,6 +106,20 @@
                 onAction="#onGuardar"
                 styleClass="boton-primario"/>
 
+        <Button fx:id="editar"
+                text="Editar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onActualizar"
+                styleClass="boton-secundario"/>
+
+        <Button fx:id="eliminar"
+                text="Eliminar"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#onEliminar"
+                styleClass="boton-peligro"/>
+
         <Button fx:id="limpiar"
                 text="Limpiar"
                 prefWidth="120"
@@ -122,7 +129,6 @@
 
     </HBox>
 
-    <!-- TABLA -->
 
     <TitledPane text="Usuarios registrados"
                 expanded="true"

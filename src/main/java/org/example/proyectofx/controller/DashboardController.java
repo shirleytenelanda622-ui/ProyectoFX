@@ -55,8 +55,8 @@ public class DashboardController {
 
         if (esAdmin || esCajero) {
             cargarVista("/org/example/proyectofx/view/mascotas.fxml");
-        } else {
-            mostrarMensajeBienvenidaReportes();
+        } else if (esReportes) {
+            cargarVista("/org/example/proyectofx/view/reportes.fxml");
         }
     }
 
@@ -77,13 +77,7 @@ public class DashboardController {
 
     @FXML
     private void onReportes(ActionEvent event) {
-        mostrarMensajeBienvenidaReportes();
-    }
-
-    private void mostrarMensajeBienvenidaReportes() {
-        Label placeholder = new Label("Módulo de Reportes en construcción (próxima entrega).");
-        placeholder.getStyleClass().add("placeholder-label");
-        contenedorPrincipal.setCenter(placeholder);
+        cargarVista("/org/example/proyectofx/view/reportes.fxml");
     }
 
     private void cargarVista(String rutaFxml) {
