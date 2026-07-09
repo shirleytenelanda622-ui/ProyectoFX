@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.Optional;
+
 
 public class UsuariosController {
 
@@ -24,6 +26,7 @@ public class UsuariosController {
     @FXML private TableColumn<Usuario, String> colRol;
 
     private final UsuarioDAO usuarioDAO = new UsuarioDAO();
+    private Usuario usuarioSeleccionado;
 
     @FXML
     public void initialize() {
@@ -34,6 +37,10 @@ public class UsuariosController {
         colCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
         colRol.setCellValueFactory(new PropertyValueFactory<>("rol"));
 
+        tablaUsuarios.getSelectionModel().selectedItemProperty().addListener((obs, anterior, seleccion) -> {
+            if (seleccion != null) cargarFormulario(seleccion);
+        });
+
         cargarTabla();
     }
 
@@ -42,9 +49,18 @@ public class UsuariosController {
         tablaUsuarios.setItems(lista);
     }
 
+    private void cargarFormulario(Usuario u) {
+        usuarioSeleccionado = u;
+        txtNombre.setText(u.getNombre());
+        txtCorreo.setText(u.getCorreo());
+        txtContrasena.clear();
+        txtContrasena.setPromptText("Dejar en blanco para no cambiarla");
+        cbRol.setValue(u.getRol());
+    }
+
     @FXML
     private void onGuardar(ActionEvent event) {
-        if (!validarFormulario()) return;
+        if (!validarFormulario(true)) return;
 
         Usuario u = new Usuario();
         u.setNombre(txtNombre.getText().trim());
@@ -62,42 +78,98 @@ public class UsuariosController {
     }
 
     @FXML
+    private void onActualizar(ActionEvent event) {
+        if (usuarioSeleccionado == null) {
+            mostrarAlerta(Alert.AlertType.WARNING, "Sin selección", "Seleccione un usuario de la tabla para editar.");
+            return;
+        }
+        if (!validarFormulario(false)) return;
+
+        usuarioSeleccionado.setNombre(txtNombre.getText().trim());
+        usuarioSeleccionado.setCorreo(txtCorreo.getText().trim());
+        usuarioSeleccionado.setRol(cbRol.getValue());
+
+
+        if (usuarioDAO.actualizar(usuarioSeleccionado)) {
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Éxito", "Usuario actualizado correctamente.");
+            limpiarFormulario();
+            cargarTabla();
+        } else {
+            mostrarAlerta(Alert.AlertType.ERROR, "Error", "No se pudo actualizar el usuario.");
+        }
+    }
+
+    @FXML
+    private void onEliminar(ActionEvent event) {
+        if (usuarioSeleccionado == null) {
+            mostrarAlerta(Alert.AlertType.WARNING, "Sin selección", "Seleccione un usuario de la tabla para eliminar.");
+            return;
+        }
+
+        Alert confirmacion = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmacion.setTitle("Confirmar eliminación");
+        confirmacion.setHeaderText(null);
+        confirmacion.setContentText("¿Desea eliminar al usuario \"" + usuarioSeleccionado.getNombre() + "\"?");
+
+        Optional<ButtonType> resultado = confirmacion.showAndWait();
+        if (resultado.isPresent() && resultado.get() == ButtonType.OK) {
+            if (usuarioDAO.eliminar(usuarioSeleccionado.getId())) {
+                mostrarAlerta(Alert.AlertType.INFORMATION, "Éxito", "Usuario eliminado correctamente.");
+                limpiarFormulario();
+                cargarTabla();
+            } else {
+                mostrarAlerta(Alert.AlertType.ERROR, "Error", "No se pudo eliminar el usuario.");
+            }
+        }
+    }
+
+    @FXML
     private void onLimpiar(ActionEvent event) {
         limpiarFormulario();
     }
 
     private void limpiarFormulario() {
+        usuarioSeleccionado = null;
         txtNombre.clear();
         txtCorreo.clear();
         txtContrasena.clear();
+        txtContrasena.setPromptText("Mínimo 6 caracteres");
         cbRol.setValue(null);
+        tablaUsuarios.getSelectionModel().clearSelection();
     }
 
-    private boolean validarFormulario() {
+
+    private boolean validarFormulario(boolean esCreacion) {
         if (txtNombre.getText() == null || txtNombre.getText().trim().isEmpty()
                 || txtCorreo.getText() == null || txtCorreo.getText().trim().isEmpty()
-                || txtContrasena.getText() == null || txtContrasena.getText().trim().isEmpty()
                 || cbRol.getValue() == null) {
-            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Todos los campos son obligatorios.");
+            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "Nombre, correo y rol son obligatorios.");
             return false;
         }
+
         String nombre = txtNombre.getText().trim();
         String correo = txtCorreo.getText().trim();
         String contrasena = txtContrasena.getText().trim();
-        if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
+
+        if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
             mostrarAlerta(Alert.AlertType.ERROR, "Datos incorrectos", "El nombre solo debe contener letras");
             return false;
         }
-        if(!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")){
+        if (!correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) {
             mostrarAlerta(Alert.AlertType.ERROR, "Correo incorrecto", "El correo debe estar completo");
             return false;
         }
-        if(contrasena.length() < 6){
+        if (esCreacion && contrasena.isEmpty()) {
+            mostrarAlerta(Alert.AlertType.WARNING, "Campos incompletos", "La contraseña es obligatoria para crear un usuario.");
+            return false;
+        }
+        if (!contrasena.isEmpty() && contrasena.length() < 6) {
             mostrarAlerta(Alert.AlertType.ERROR, "Contraseña incompleta", "La contraseña debe contener al menos 6 caracteres");
             return false;
         }
         return true;
     }
+
     private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
         Alert alert = new Alert(tipo);
         alert.setTitle(titulo);
