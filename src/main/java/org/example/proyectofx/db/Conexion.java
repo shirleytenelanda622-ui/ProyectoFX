@@ -9,7 +9,7 @@ public class Conexion {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/veterinaria";
     private static final String USUARIO = "postgres";
-    private static final String PASSWORD = "123";
+    private static final String PASSWORD = "123456";
 
     private static Conexion instancia;
     private Connection conexion;
