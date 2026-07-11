@@ -9,7 +9,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-
+    public static void main(String[] args){
+        launch(args);
+    }
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/org/example/proyectofx/view/login.fxml"));
@@ -22,9 +24,5 @@ public class Main extends Application {
         stage.setMinWidth(420);
         stage.setMinHeight(380);
         stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
