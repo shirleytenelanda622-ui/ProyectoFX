@@ -23,8 +23,8 @@ El sistema resuelve la gestión administrativa y clínica de una veterinaria: re
 
 ## Integrantes
 
-| Estudiante | Rol en el proyecto |
-|---|---|
+| Estudiante |
+|---|
 | _Alisson Quiguango_ |
 | _Shirley Tenelanda_ | 
 
