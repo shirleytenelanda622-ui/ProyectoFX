@@ -52,7 +52,7 @@ El sistema resuelve la gestión administrativa y clínica de una veterinaria: re
 ProyectoFX/
 ├── src/main/java/org/example/proyectofx/
 │   ├── app/            # Punto de entrada (Main, Launcher)
-│   ├── model/           # Entidades: Persona, Usuario, Propietario, Mascota, Consulta
+│   ├── model/           # Entidades: Persona, Usuario, Propietario, Mascota, Consulta con atributos privados y metodos get/set
 │   ├── dao/             # Acceso a datos: CRUD, UsuarioDAO, PropietarioDAO, MascotaDAO, ConsultaDAO
 │   ├── controller/       # Controladores FXML: Login, Dashboard, Usuarios, Propietarios, Mascotas, Reportes
 │   └── db/              # Conexion.java (conexión JDBC a PostgreSQL)
