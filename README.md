@@ -140,6 +140,7 @@ Usar alguno de los usuarios de prueba creados por el script SQL:
 
 ##  Capturas de pantalla
 Login
+
 <img width="497" height="708" alt="image" src="https://github.com/user-attachments/assets/171c16d4-652a-4131-b441-43b46204f46d" />
 Administrador - Gestion de Mascotas
 <img width="1249" height="842" alt="image" src="https://github.com/user-attachments/assets/51d902a8-c424-43af-9fd3-27b3423beedc" />
