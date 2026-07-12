@@ -320,3 +320,21 @@ Launcher:	C:\Users\pecjs\.jdks\openjdk-26.0.1\bin\javaw.exe
 Launcher args:	-jar "C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe"
 Args length:	56/32768 chars
 Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+JRE paths:	C:\Users\pecjs\.jdks\openjdk-26.0.1
+Check launcher:	C:\Users\pecjs\.jdks\openjdk-26.0.1\bin\javaw.exe (OK)
+Version string: 1.026.000_001 / 64-Bit (OK)
+Launcher:	C:\Users\pecjs\.jdks\openjdk-26.0.1\bin\javaw.exe
+Launcher args:	-jar "C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe"
+Args length:	56/32768 chars
+Exit code:	0
