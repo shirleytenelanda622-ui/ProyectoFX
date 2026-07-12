@@ -1,0 +1,322 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	Yes
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-17\bin\javac.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	Yes
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-17\bin\javac.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+JRE paths:	;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\pecjs\Desktop\mingw64\mingw32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\;C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps;C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin;search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git;C:\Users\pecjs\AppData\Local\GitHubDesktop\bin;C:\Users\pecjs\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin
+Check launcher:	C:\Program Files (x86)\VMware\VMware Workstation\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\mingw64\mingw32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MySQL\MySQL Shell 8.0\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Python\Launcher\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\Desktop\ProyectoFX\search-ms:displayname=Resultados%20de%20la%20búsqueda%20en%20Inicio&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Git\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\pecjs\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\17.0.12
+Version string: 1.017.000_012 / 64-Bit (Ignore)
+Ignore:		1.017.000_012
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 21
+
+
+Version:	3.50
+CmdLine:	C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\pecjs\Desktop\ProyectoFX\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.021.000
+Java max ver:	
+JRE paths:	C:\Users\pecjs\.jdks\openjdk-26.0.1
+Check launcher:	C:\Users\pecjs\.jdks\openjdk-26.0.1\bin\javaw.exe (OK)
+Version string: 1.026.000_001 / 64-Bit (OK)
+Launcher:	C:\Users\pecjs\.jdks\openjdk-26.0.1\bin\javaw.exe
+Launcher args:	-jar "C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe"
+Args length:	56/32768 chars
+Exit code:	0
