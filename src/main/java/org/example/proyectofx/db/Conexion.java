@@ -7,9 +7,9 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/veterinaria";
+    private static final String URL = "jdbc:postgresql://tokaido.proxy.rlwy.net:39674/railway";
     private static final String USUARIO = "postgres";
-    private static final String PASSWORD = "123";
+    private static final String PASSWORD = "ZMPhJwotHKYstYsBIZwNPqpaqtDMBaJh";
 
     private static Conexion instancia;
     private Connection conexion;
