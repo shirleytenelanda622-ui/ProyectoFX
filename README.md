@@ -1,7 +1,6 @@
 # Sistema de Gestión para Veterinaria — ProyectoFX
 
 Aplicación de escritorio desarrollada en **JavaFX** aplicando los principios de la **Programación Orientada a Objetos (POO)**, con persistencia en **PostgreSQL**. Permite administrar propietarios, mascotas, consultas y usuarios, con acceso diferenciado según el rol del usuario.
-
 Proyecto Final — **Programación Orientada a Objetos**
 Período académico **2026-A**
 
