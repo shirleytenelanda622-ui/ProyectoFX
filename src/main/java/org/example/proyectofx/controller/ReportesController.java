@@ -1,5 +1,6 @@
 package org.example.proyectofx.controller;
 
+import javafx.scene.control.TableCell;
 import org.example.proyectofx.dao.ConsultaDAO;
 import org.example.proyectofx.model.Consulta;
 import javafx.collections.FXCollections;
@@ -9,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.example.proyectofx.model.Mascota;
 
 import java.text.NumberFormat;
 import java.util.Locale;

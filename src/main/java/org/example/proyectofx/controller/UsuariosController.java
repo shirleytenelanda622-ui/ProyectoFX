@@ -1,6 +1,7 @@
 package org.example.proyectofx.controller;
 
 import org.example.proyectofx.dao.UsuarioDAO;
+import org.example.proyectofx.model.Mascota;
 import org.example.proyectofx.model.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,6 +31,17 @@ public class UsuariosController {
 
     @FXML
     public void initialize() {
+        colId.setCellFactory(col -> new TableCell<Usuario, Integer>(){
+            @Override
+            protected void updateItem(Integer item, boolean empty){
+                super.updateItem(item, empty);
+                if(empty){
+                    setText(null);
+                } else {
+                    setText(String.valueOf(getIndex() + 1));
+                }
+            }
+        });
         cbRol.setItems(FXCollections.observableArrayList("ADMIN", "CAJERO", "REPORTES"));
 
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
