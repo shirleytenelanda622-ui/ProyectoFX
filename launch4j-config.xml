@@ -1,23 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <launch4jConfig>
-    <dontWrapJar>false</dontWrapJar>
-    <headerType>gui</headerType>
-    <jar>C:\Users\pecjs\Desktop\ProyectoFX\out\artifacts\ProyectoFX_jar\ProyectoFX.jar</jar>
-    <outfile>C:\Users\pecjs\Desktop\ProyectoFX\Veterinaria.exe</outfile>
-    <errTitle></errTitle>
-    <cmdLine></cmdLine>
-    <chdir>.</chdir>
-    <priority>normal</priority>
-    <downloadUrl></downloadUrl>
-    <supportUrl></supportUrl>
-    <stayAlive>false</stayAlive>
-    <restartOnCrash>false</restartOnCrash>
-    <manifest></manifest>
-    <icon>C:\Users\pecjs\Desktop\ProyectoFX\src\main\resources\org\example\proyectofx\Imagenes\veterinary_icon_180324.ico</icon>
-    <jre>
-        <path>C:\Users\pecjs\.jdks\openjdk-26.0.1</path>
-        <requiresJdk>false</requiresJdk>
-        <requires64Bit>false</requires64Bit>
-        <minVersion>21</minVersion>
-        <maxVersion></maxVersion>
-    </jre>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\pecjs\Downloads\ProyectoFX\out\artifacts\ProyectoFX_jar\ProyectoFX.jar</jar>
+  <outfile>C:\Users\pecjs\Downloads\ProyectoFX\Veterinaria.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\pecjs\Desktop\ProyectoFX\src\main\resources\org\example\proyectofx\Imagenes\veterinary_icon_180324.ico</icon>
+  <jre>
+    <path>C:\Users\pecjs\.jdks\openjdk-26.0.1</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>21</minVersion>
+    <maxVersion></maxVersion>
+  </jre>
 </launch4jConfig>
