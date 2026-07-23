@@ -12,8 +12,6 @@ import java.util.List;
 
 
 public class UsuarioDAO implements CRUD<Usuario> {
-
-
     public Usuario autenticar(String correo, String contrasena) {
         String sql = "SELECT * FROM usuarios WHERE correo = ? AND contrasena = ?";
         try (Connection con = Conexion.getInstancia().getConnection();
@@ -41,19 +39,46 @@ public class UsuarioDAO implements CRUD<Usuario> {
 
     @Override
     public boolean guardar(Usuario u) {
-        String sql = "INSERT INTO usuarios (nombre, correo, contrasena, rol) VALUES (?,?,?,?)";
+        int nuevoId = generarIdUnico();
+        u.setId(nuevoId);
+
+        String sql = "INSERT INTO usuarios (id_usuario, nombre, correo, contrasena, rol) VALUES (?,?,?,?,?)";
         try (Connection con = Conexion.getInstancia().getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, u.getNombre());
-            ps.setString(2, u.getCorreo());
-            ps.setString(3, u.getContrasena());
-            ps.setString(4, u.getRol());
+            ps.setInt(1, nuevoId);
+            ps.setString(2, u.getNombre());
+            ps.setString(3, u.getCorreo());
+            ps.setString(4, u.getContrasena());
+            ps.setString(5, u.getRol());
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
             System.err.println("Error al guardar usuario: " + e.getMessage());
             return false;
+        }
+    }
+
+    private int generarIdUnico() {
+        java.util.Random random = new java.util.Random();
+        int idGenerado;
+        do {
+            idGenerado = 100000 + random.nextInt(900000); // número aleatorio de 6 dígitos
+        } while (existeId(idGenerado));
+        return idGenerado;
+    }
+
+    private boolean existeId(int id) {
+        String sql = "SELECT 1 FROM usuarios WHERE id_usuario = ?";
+        try (Connection con = Conexion.getInstancia().getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al validar id: " + e.getMessage());
+            return true;
         }
     }
 

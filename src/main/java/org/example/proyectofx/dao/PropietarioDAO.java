@@ -12,23 +12,49 @@ import java.util.List;
 
 
 public class PropietarioDAO implements CRUD<Propietario> {
-
     @Override
     public boolean guardar(Propietario p) {
-        String sql = "INSERT INTO propietarios (cedula, nombre, telefono, direccion, correo) VALUES (?,?,?,?,?)";
+        int nuevoId = generarIdUnico();
+        p.setId(nuevoId);
+
+        String sql = "INSERT INTO propietarios (id_propietario, cedula, nombre, telefono, direccion, correo) VALUES (?,?,?,?,?,?)";
         try (Connection con = Conexion.getInstancia().getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, p.getCedula());
-            ps.setString(2, p.getNombre());
-            ps.setString(3, p.getTelefono());
-            ps.setString(4, p.getDireccion());
-            ps.setString(5, p.getCorreo());
+            ps.setInt(1, nuevoId);
+            ps.setString(2, p.getCedula());
+            ps.setString(3, p.getNombre());
+            ps.setString(4, p.getTelefono());
+            ps.setString(5, p.getDireccion());
+            ps.setString(6, p.getCorreo());
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
             System.err.println("Error al guardar propietario: " + e.getMessage());
             return false;
+        }
+    }
+
+    private int generarIdUnico() {
+        java.util.Random random = new java.util.Random();
+        int idGenerado;
+        do {
+            idGenerado = 100000 + random.nextInt(900000); // número aleatorio de 6 dígitos
+        } while (existeId(idGenerado));
+        return idGenerado;
+    }
+
+    private boolean existeId(int id) {
+        String sql = "SELECT 1 FROM propietarios WHERE id_propietario = ?";
+        try (Connection con = Conexion.getInstancia().getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al validar id: " + e.getMessage());
+            return true;
         }
     }
 
