@@ -40,17 +40,6 @@ public class MascotasController {
 
     @FXML
     public void initialize() {
-        colId.setCellFactory(col -> new TableCell<Mascota, Integer>(){
-            @Override
-            protected void updateItem(Integer item, boolean empty){
-                super.updateItem(item, empty);
-                if(empty){
-                    setText(null);
-                } else {
-                    setText(String.valueOf(getIndex() + 1));
-                }
-            }
-        });
 
         cbSexo.setItems(FXCollections.observableArrayList("Macho", "Hembra"));
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));

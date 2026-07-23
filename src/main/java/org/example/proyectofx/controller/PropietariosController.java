@@ -33,17 +33,7 @@ public class PropietariosController {
 
     @FXML
     public void initialize() {
-        colId.setCellFactory(col -> new TableCell<Propietario, Integer>(){
-            @Override
-            protected void updateItem(Integer item, boolean empty){
-                super.updateItem(item, empty);
-                if(empty){
-                    setText(null);
-                } else {
-                    setText(String.valueOf(getIndex() + 1));
-                }
-            }
-        });
+        
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colCedula.setCellValueFactory(new PropertyValueFactory<>("cedula"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));

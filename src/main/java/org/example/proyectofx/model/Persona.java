@@ -1,4 +1,5 @@
 package org.example.proyectofx.model;
+
 public abstract class Persona {
 
     private int id;
